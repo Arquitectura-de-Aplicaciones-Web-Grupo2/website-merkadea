@@ -1,0 +1,11 @@
+{
+    "pedidos": [
+        {
+            "id_Pedido": 1,
+            "id_Consumidor": 1,
+            "fecha_Pedido": "02-04-2015",
+            "pago_Total": 125,
+            "idTienda": 1
+        }
+    ]
+}

@@ -12,9 +12,11 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { PedidosComponent } from './pedidos/pedidos.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PedidosComponent
   ],
   imports: [
     BrowserModule,
