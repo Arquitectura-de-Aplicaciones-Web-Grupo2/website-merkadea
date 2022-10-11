@@ -27,7 +27,7 @@ export class ImgComponent
   @Input() alt: string = '';
   @Output() loaded = new EventEmitter<string>();
   imgDefault =
-    'https://raw.githubusercontent.com/platzi/angular-componentes/2-step/src/assets/images/default.png';
+    '../../../assets/img/default.png';
 
   counter = 0;
   counterFn: number | undefined;
