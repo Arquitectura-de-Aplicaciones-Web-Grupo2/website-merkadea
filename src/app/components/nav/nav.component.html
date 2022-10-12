@@ -1,13 +1,18 @@
 <div class="show-mobile">
   <div>
     <button (click)="toggleMenu()">
-      <img src="icono" alt="menu" />
+      <img id="menuu" src="../../../assets/img/lista.png" alt="menu" />
     </button>
     <a href="">
-      <img src="logo" alt="logo" />
+      <img id="logoo" src="../../../assets/img/logo.png" alt="logo" />
     </a>
     <a href="">
-      <img src="cart" alt="logo" />
+      <img
+        id="carts"
+        src="../../../assets/img/carrito-de-compras.png"
+        alt="logo"
+      />
+      <span class="couter">{{ counter }}</span>
     </a>
   </div>
   <div class="side-menu" [class.active]="activeMenu">
@@ -24,7 +29,7 @@
   <div>
     <nav>
       <a href="">
-        <img src="logo" alt="logo" />
+        <img src="../../../assets/img/logo.png" alt="logo" />
       </a>
       <ul>
         <li><a href="">All</a></li>

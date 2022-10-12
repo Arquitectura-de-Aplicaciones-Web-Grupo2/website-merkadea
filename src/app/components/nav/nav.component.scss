@@ -10,6 +10,21 @@
       border: 0;
       background: transparent;
     }
+    button {
+      #menuu {
+        width: 2rem;
+      }
+    }
+    a {
+      #logoo {
+        width: 6rem;
+      }
+    }
+    a {
+      #carts {
+        width: 1.3rem;
+      }
+    }
   }
   .side-menu {
     position: fixed;
@@ -43,6 +58,11 @@
   nav {
     display: flex;
     align-items: center;
+    a {
+      img {
+        width: 80px;
+      }
+    }
     ul {
       display: flex;
       list-style: none;
@@ -59,9 +79,9 @@
     .account {
       margin-right: 0.5em;
     }
-    div a img{
+    div a img {
       width: 2em;
-    };
+    }
   }
 }
 
