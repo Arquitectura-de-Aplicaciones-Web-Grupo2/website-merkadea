@@ -1,19 +1,17 @@
 <div class="show-mobile">
   <div>
     <button (click)="toggleMenu()">
-      <img id="menuu" src="../../../assets/img/lista.png" alt="menu" />
+      <img src="./assets/svg/icon_menu.svg" alt="menu" />
     </button>
     <a href="">
-      <img id="logoo" src="../../../assets/img/logo.png" alt="logo" />
+      <img id="logoo" src="../../../assets/images/logo.png" alt="logo" />
     </a>
-    <a href="">
-      <img
-        id="carts"
-        src="../../../assets/img/carrito-de-compras.png"
-        alt="logo"
-      />
-      <span class="couter">{{ counter }}</span>
-    </a>
+    <div class="cart">
+      <a href="">
+        <img src="./assets/svg/icon_shopping_cart.svg" alt="logo" />
+      </a>
+      <span class="counter">{{ counter }}</span>
+    </div>
   </div>
   <div class="side-menu" [class.active]="activeMenu">
     <button (click)="toggleMenu()">Close</button>
@@ -24,12 +22,11 @@
     </ul>
   </div>
 </div>
-
 <div class="hide-mobile">
   <div>
     <nav>
-      <a href="">
-        <img src="../../../assets/img/logo.png" alt="logo" />
+      <a id="logo" href="">
+        <img id="logoo" src="../../../assets/images/logo.png" alt="logo" />
       </a>
       <ul>
         <li><a href="">All</a></li>
@@ -38,12 +35,12 @@
       </ul>
     </nav>
     <div class="info">
-      <div class="account">jhimy@upc.edu.pe</div>
-      <div>
+      <div class="account">u201818218@upc.edu.pe</div>
+      <div class="cart">
         <a href="">
-          <img src="../../../assets/img/carrito-de-compras.png" alt="carrito" />
+          <img src="./assets/svg/icon_shopping_cart.svg" alt="logo" />
         </a>
-        <span class="couter">{{ counter }}</span>
+        <span class="counter">{{ counter }}</span>
       </div>
     </div>
   </div>

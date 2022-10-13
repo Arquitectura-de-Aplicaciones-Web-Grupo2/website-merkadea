@@ -5,10 +5,11 @@
 * {
   font-family: "Quicksand", sans-serif;
 }
-.products--grig {
+.products--grid {
   app-img {
     img {
       border-radius: 10px;
+      max-height: 200px;
     }
   }
 }
