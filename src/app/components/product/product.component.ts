@@ -9,20 +9,28 @@ import { Product } from '../../models/product.model';
 })
 // implements OnInit
 export class ProductComponent {
-  @Input() producto: Product = {
+  @Input() product: Product = {
     id: '',
-    title: '',
     price: 0,
-    image: '',
+    images: [],
+    title: '',
+    category: {
+      id: '',
+      name: '',
+      typeImg: '',
+    },
     description: '',
-    category: '',
   };
   @Output() addedProduct = new EventEmitter<Product>();
+  @Output() showProduct = new EventEmitter<string>(); ///id aun que tambien
   constructor() {}
 
   // ngOnInit(): void {}
 
   onAddToCart() {
-    this.addedProduct.emit(this.producto);
+    this.addedProduct.emit(this.product);
+  }
+  onShowDetail() {
+    this.showProduct.emit(this.product.id);
   }
 }
