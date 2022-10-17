@@ -1,38 +1,38 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms'; 
-import { ReactiveFormsModule } from '@angular/forms'; 
+
+import { HomeComponent } from './components/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatTableModule } from '@angular/material/table';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { PedidosComponent } from './pedidos/pedidos.component';
+import { AngularMaterialModule } from './components/shared/angular-material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { AddPedidosComponent } from './components/add-pedidos/add-pedidos.component';
+import { EditPedidosComponent } from './components/edit-pedidos/edit-pedidos.component';
+import { ListPedidosComponent } from './components/list-pedidos/list-pedidos.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    PedidosComponent
+    HomeComponent,
+    NavbarComponent,
+    AddPedidosComponent,
+    EditPedidosComponent,
+    ListPedidosComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule,
+    AngularMaterialModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatButtonModule,
-    MatInputModule,
-    MatPaginatorModule,
-    MatTableModule,
-    MatToolbarModule,
-    MatIconModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
