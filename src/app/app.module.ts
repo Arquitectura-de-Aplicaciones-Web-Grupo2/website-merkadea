@@ -19,13 +19,17 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatCardModule} from '@angular/material/card';
 import { AddProductsComponent } from './components/add-products/add-products.component';
+import { HomeComponent } from './components/home/home.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
     ToolbarComponent,
-    AddProductsComponent
+    AddProductsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,9 @@ import { AddProductsComponent } from './components/add-products/add-products.com
     MatIconModule, 
     MatButtonModule, 
     MatSnackBarModule, 
-    MatCardModule
+    MatCardModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
