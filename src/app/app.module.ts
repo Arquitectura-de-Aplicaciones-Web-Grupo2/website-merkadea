@@ -18,12 +18,14 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatCardModule} from '@angular/material/card';
+import { AddProductsComponent } from './components/add-products/add-products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    AddProductsComponent
   ],
   imports: [
     BrowserModule,
