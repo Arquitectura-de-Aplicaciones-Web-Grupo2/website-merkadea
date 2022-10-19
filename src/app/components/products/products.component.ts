@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../../models/product.model';
+import {
+  Product,
+  CreateProductDTO,
+  UpdateProductDTO,
+} from '../../models/product.model';
 import { StoreService } from '../../services/store.service';
 import { ProductsService } from '../../services/products.service';
 
@@ -56,6 +60,43 @@ export class ProductsComponent implements OnInit {
       // console.log('product', data);
       this.toggleProductDetail();
       this.productChosen = data;
+    });
+  }
+  //crear un nuevoo producto usando la API
+  createNewProduct() {
+    const product: CreateProductDTO = {
+      title: 'Nuevo producto',
+      description: 'bla bla bla',
+      images: ['https://placeimg.com/640/480/any?random=${Math.random()}'],
+      price: 1000,
+      categoryId: 2,
+    };
+    this.productsService.create(product).subscribe((data) => {
+      this.products.unshift(data);
+    });
+  }
+  updateProduct() {
+    //buenas practicas
+    const changes: UpdateProductDTO = {
+      title: 'Nuevo titu',
+    };
+    const id = this.productChosen.id;
+    this.productsService.update(id, changes).subscribe((data) => {
+      //chapa en que posi esta tal product
+      const productIndex = this.products.findIndex(
+        (item) => item.id === this.productChosen.id
+      );
+      this.products[productIndex] = data;
+    });
+  }
+  deleteProduct() {
+    const id = this.productChosen.id;
+    this.productsService.delete(id).subscribe(() => {
+      const productIndex = this.products.findIndex(
+        (item) => item.id === this.productChosen.id
+      );
+      this.products.splice(productIndex, 1);
+      this.showProductDetail = false;
     });
   }
 }
