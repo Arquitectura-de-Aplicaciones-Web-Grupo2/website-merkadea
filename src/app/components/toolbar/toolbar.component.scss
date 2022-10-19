@@ -1,0 +1,22 @@
+span {
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+button {
+    margin: 0px 2px;
+    color: white;
+    font-size: 20px;
+    background-color: #FE8C00;
+}
+
+.mat-toolbar {
+    background: linear-gradient(90deg, #FE8C00 0%, #F83600 100%);
+}
