@@ -4,6 +4,6 @@ export class Pedido {
     id_Consumidor: number | undefined;
     id_Tienda: number | undefined;
     cantidad: number | undefined;
-    precio: number | undefined;
+    precio_Total: number | undefined;
     fecha_Pedido: string | undefined;
 }
