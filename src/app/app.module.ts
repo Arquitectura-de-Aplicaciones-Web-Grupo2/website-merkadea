@@ -22,6 +22,9 @@ import { AddProductsComponent } from './components/add-products/add-products.com
 import { HomeComponent } from './components/home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeConsumidorComponent } from './components/home-consumidor/home-consumidor.component';
+import { ToolbarConsumidorComponent } from './components/toolbar-consumidor/toolbar-consumidor.component';
+import { ElectionSectionComponent } from './components/election-section/election-section.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { HttpClientModule } from '@angular/common/http';
     ProductsComponent,
     ToolbarComponent,
     AddProductsComponent,
-    HomeComponent
+    HomeComponent,
+    HomeConsumidorComponent,
+    ToolbarConsumidorComponent,
+    ElectionSectionComponent
   ],
   imports: [
     BrowserModule,
