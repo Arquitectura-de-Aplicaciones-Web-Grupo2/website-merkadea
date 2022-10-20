@@ -1,0 +1,33 @@
+.toolbar-section{
+    background-color: orange;
+}
+
+.span1{
+    color: white; 
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+button{
+    color:white;
+    height: 70%;
+    width: 10%;
+    font-size: 20px;
+    background-color: #FE8C00;
+    margin-left: 1%;
+}
+.mat-stroked-button{
+    border-color: white;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-radius: 5%;
+}
+
+.toolbar-section{
+    background: linear-gradient(90deg, #FE8C00 0%, #F83600 100%);
+}
