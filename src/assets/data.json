@@ -20,21 +20,12 @@
     },
     {
       "id": 3,
-      "id_Producto": "1",
-      "id_Consumidor": "1",
-      "id_Tienda": "1",
-      "cantidad": "1",
-      "precio_Total": "1",
-      "fecha_Pedido": "1"
-    },
-    {
-      "id": 4,
-      "id_Producto": "1",
-      "id_Consumidor": "2",
-      "id_Tienda": "3",
-      "cantidad": "4",
-      "precio_Total": "5",
-      "fecha_Pedido": "6"
+      "id_Producto": "45",
+      "id_Consumidor": "55",
+      "id_Tienda": "123",
+      "cantidad": "42",
+      "precio_Total": "125.2",
+      "fecha_Pedido": "15-07-2019"
     }
   ]
 }
