@@ -11,7 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./listar-pedido.component.scss']
 })
 export class ListarPedidoComponent implements OnInit {
-  columnas: string[] = ['id_Pedido', 'id_Producto', 'id_Consumidor', 'id_Tienda', 'cantidad', 'precio_Total', 'fecha_Pedido', 'actions'];
+  columnas: string[] = ['id', 'id_Producto', 'id_Consumidor', 'id_Tienda', 'cantidad', 'precio_Total', 'fecha_Pedido', 'actions'];
   dataSource = new MatTableDataSource<Pedido>();
   pedidos!: Pedido[];
 
@@ -33,10 +33,10 @@ export class ListarPedidoComponent implements OnInit {
     });
   }
 
-  eliminarPedido(id_Pedido: number) {
-    this.pedidoService.eliminarPedido(id_Pedido).subscribe(() => {
+  eliminarPedido(id: number) {
+    this.pedidoService.eliminarPedido(id).subscribe(() => {
       this.dataSource.data = this.dataSource.data.filter((e: Pedido) => {
-        return e.id_Pedido !== id_Pedido ? e : false;
+        return e.id !== id ? e : false;
       });
       this.snackBar.open('Pedido eliminado exitosamente!', '', {
         duration: 6000

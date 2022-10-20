@@ -1,5 +1,5 @@
 export class Pedido {
-    id_Pedido: number | undefined;
+    id: number | undefined;
     id_Producto: number | undefined;
     id_Consumidor: number | undefined;
     id_Tienda: number | undefined;

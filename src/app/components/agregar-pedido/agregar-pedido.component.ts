@@ -13,13 +13,13 @@ import { PedidoService } from 'src/app/services/pedido.service';
 export class AgregarPedidoComponent implements OnInit {
   form!: FormGroup;
 
-  constructor(private fb: FormBuilder, private pedidoService: PedidoService, private snackBar: MatSnackBar, private router: Router) {}
+  constructor(private fb: FormBuilder, private pedidoService: PedidoService, private snackBar: MatSnackBar, private router: Router) { }
 
-  ngOnInit(): void {this.reactivarForm();}
+  ngOnInit(): void { this.reactivarForm(); }
 
-  reactivarForm(){
+  reactivarForm() {
     this.form = this.fb.group({
-      id_Pedido: [''],
+      id: [''],
       id_Producto: ['', [Validators.required]],
       id_Consumidor: ['', [Validators.required]],
       id_Tienda: ['', [Validators.required]],
@@ -31,7 +31,7 @@ export class AgregarPedidoComponent implements OnInit {
 
   guardarPedido(): void {
     const pedido: Pedido = {
-      id_Pedido: 0,
+      id: 0,
       id_Producto: this.form.get('id_Producto')!.value,
       id_Consumidor: this.form.get('id_Consumidor')!.value,
       id_Tienda: this.form.get('id_Tienda')!.value,
@@ -40,8 +40,15 @@ export class AgregarPedidoComponent implements OnInit {
       fecha_Pedido: this.form.get('fecha_Pedido')!.value
     };
     this.pedidoService.agregarPedido(pedido).subscribe({
-      next: (data) => {this.snackBar.open('Pedido registrado exitosamente!', '', {duration: 6000});},
-      error: (err) => {console.log(err);}
-    })
+      next: (data) => {
+        this.snackBar.open('Pedido registrado exitosamente!', '', {
+          duration: 6000,
+        });
+        this.router.navigate(['/listas/pedidos']);
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    });
   }
 }

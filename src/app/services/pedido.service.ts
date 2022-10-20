@@ -15,9 +15,9 @@ export class PedidoService {
 
   agregarPedido(pedido: Pedido) {return this.http.post<Pedido>(this.urlBase, pedido);}
 
-  getPedidoId(id_Pedido: any) {return this.http.get<Pedido>(`${this.urlBase}/${id_Pedido}`);}
+  getPedidoId(id: any) {return this.http.get<Pedido>(`${this.urlBase}/${id}`);}
 
-  actualizarPedido(id_Pedido:any, pedido: Pedido) {return this.http.put<Pedido>(`${this.urlBase}/${id_Pedido}`, pedido);}
+  actualizarPedido(id: any, pedido: Pedido) {return this.http.put<Pedido>(`${this.urlBase}/${id}`, pedido);}
 
-  eliminarPedido(id_Pedido: any) {return this.http.delete<Pedido>(`${this.urlBase}/${id_Pedido}`);}
+  eliminarPedido(id: any) {return this.http.delete<Pedido>(`${this.urlBase}/${id}`);}
 }
