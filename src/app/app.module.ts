@@ -6,8 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsComponent } from './components/products/products.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
-
-
+import {GoogleMapsModule} from '@angular/google-maps';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTableModule} from '@angular/material/table';
@@ -20,8 +19,12 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatCardModule} from '@angular/material/card';
 import { AddProductsComponent } from './components/add-products/add-products.component';
 import { HomeComponent } from './components/home/home.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeConsumidorComponent } from './components/home-consumidor/home-consumidor.component';
+import { ToolbarConsumidorComponent } from './components/toolbar-consumidor/toolbar-consumidor.component';
+import { ElectionSectionComponent } from './components/election-section/election-section.component';
+import { BuscarNegocioComponent } from './components/buscar-negocio/buscar-negocio.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,11 @@ import { HttpClientModule } from '@angular/common/http';
     ProductsComponent,
     ToolbarComponent,
     AddProductsComponent,
-    HomeComponent
+    HomeComponent,
+    HomeConsumidorComponent,
+    ToolbarConsumidorComponent,
+    ElectionSectionComponent,
+    BuscarNegocioComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +53,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatSnackBarModule, 
     MatCardModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    GoogleMapsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

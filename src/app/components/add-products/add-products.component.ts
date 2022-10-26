@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-products',
@@ -7,8 +9,8 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./add-products.component.scss']
 })
 export class AddProductsComponent implements OnInit {
-  form!: FormGroup;
-  constructor() { }
+  myForm!: FormGroup;
+  constructor(private fb: FormBuilder, private snackBar: MatSnackBar, private router: Router) { }
 
   ngOnInit(): void {
   }
