@@ -12,7 +12,14 @@ export class AddProductsComponent implements OnInit {
   myForm!: FormGroup;
   constructor(private fb: FormBuilder, private snackBar: MatSnackBar, private router: Router) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {this.reactiveForm();}
 
+  reactiveForm(){
+    this.myForm = this.fb.group({
+      id_producto: [''],
+      nombre_producto: ['', [Validators.required]],
+      precio_producto: ['', [Validators.required]],
+      descuento_producto: ['', [Validators.required]]
+    })
+  }
 }
