@@ -25,6 +25,8 @@ import { HomeConsumidorComponent } from './components/home-consumidor/home-consu
 import { ToolbarConsumidorComponent } from './components/toolbar-consumidor/toolbar-consumidor.component';
 import { ElectionSectionComponent } from './components/election-section/election-section.component';
 import { BuscarNegocioComponent } from './components/buscar-negocio/buscar-negocio.component';
+import { RegisterScreenComponent } from './components/register-screen/register-screen.component';
+import { LoginScreenComponent } from './components/login-screen/login-screen.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { BuscarNegocioComponent } from './components/buscar-negocio/buscar-negoc
     HomeConsumidorComponent,
     ToolbarConsumidorComponent,
     ElectionSectionComponent,
-    BuscarNegocioComponent
+    BuscarNegocioComponent,
+    RegisterScreenComponent,
+    LoginScreenComponent
   ],
   imports: [
     BrowserModule,
