@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "merkadea-423aa": {
+      "hosting": {
+        "website-merkadea": [
+          "merkadea-423aa"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "merkadea-423aa"
+  }
+}
