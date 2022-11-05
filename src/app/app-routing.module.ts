@@ -13,6 +13,7 @@ const routes: Routes = [
   {path: 'home/inventory/add-products', component: AddProductsComponent},
   {path: 'home/welcome-consumidor', component: HomeConsumidorComponent},
   {path: 'find/locate-market', component:BuscarNegocioComponent},
+  {path: '', component:HomeComponent}
 ];
 
 @NgModule({
