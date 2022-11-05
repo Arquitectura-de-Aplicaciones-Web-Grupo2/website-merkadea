@@ -4,6 +4,7 @@
 ></app-img>
 <h2>{{ product.price | currency: "PEN" }}</h2>
 <p>{{ product.title | reverse }}</p>
+<p>{{ product.category.name }}</p>
 <!-- <p appHighlight>{{producto.description}}</p> -->
 <button (click)="onShowDetail()">Ver detalle</button>
 <button (click)="onAddToCart()">Add cart</button>
