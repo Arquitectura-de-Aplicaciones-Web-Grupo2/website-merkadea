@@ -24,6 +24,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { RecoveryComponent } from './pages/recovery/recovery.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { ShopComponent } from './pages/shop/shop.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
     RegisterComponent,
     RecoveryComponent,
     ProfileComponent,
+    ShopComponent,
   ],
   imports: [
     BrowserModule,
