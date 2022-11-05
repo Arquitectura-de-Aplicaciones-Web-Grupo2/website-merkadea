@@ -9,6 +9,8 @@ import { Product } from '../../models/product.model';
 })
 export class HomeComponent implements OnInit {
   products: Product[] = [];
+  limit = 10;
+  offset = 0;
 
   constructor(private productsService: ProductsService) {}
 
@@ -16,5 +18,13 @@ export class HomeComponent implements OnInit {
     this.productsService.getProductsByPage(10, 0).subscribe((data) => {
       this.products = data;
     });
+  }
+  onLoadMore() {
+    this.productsService
+      .getProductsByPage(this.limit, this.offset)
+      .subscribe((data) => {
+        this.products = this.products.concat(data);
+        this.offset += this.limit;
+      });
   }
 }

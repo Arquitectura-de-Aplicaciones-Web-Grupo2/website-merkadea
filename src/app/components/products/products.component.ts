@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import {
   Product,
   CreateProductDTO,
@@ -17,6 +17,7 @@ export class ProductsComponent {
   myShoppingCart: Product[] = [];
   total = 0;
   @Input() products: Product[] = [];
+  @Output() loadMore = new EventEmitter();
   showProductDetail = false;
   productChosen: Product = {
     id: '',
@@ -101,13 +102,16 @@ export class ProductsComponent {
       this.showProductDetail = false;
     });
   }
-
-  loadMore() {
-    this.productsService
-      .getProductsByPage(this.limit, this.offset)
-      .subscribe((data) => {
-        this.products = this.products.concat(data);
-        this.offset += this.limit;
-      });
+  onLoadMore() {
+    this.loadMore.emit();
   }
+
+  // loadMore() {
+  //   this.productsService
+  //     .getProductsByPage(this.limit, this.offset)
+  //     .subscribe((data) => {
+  //       this.products = this.products.concat(data);
+  //       this.offset += this.limit;
+  //     });
+  // }
 }
