@@ -1,0 +1,24 @@
+#header {
+  background: linear-gradient(90deg, #727a17 0%, #727a17 100%);
+  .btn-merkadea {
+    background: linear-gradient(90deg, #727a17 0%, #727a17 100%);
+  }
+  .btn-merkadea:hover {
+    background: linear-gradient(90deg, #fe8c00 0%, #f83600 100%);
+  }
+}
+#main {
+  .carousel-inner img {
+    max-height: 70vh; //el 70% del alto
+    object-fit: cover;
+    //filtro
+    filter: grayscale(70%);
+  }
+}
+#footer {
+  background: linear-gradient(90deg, #fe8c00 0%, #f83600 100%);
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
