@@ -11,6 +11,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { RecoveryComponent } from './pages/recovery/recovery.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ShopComponent } from './pages/shop/shop.component';
+import { LandingComponent } from './components/landing/landing.component';
 
 const routes: Routes = [
   {
@@ -53,6 +54,10 @@ const routes: Routes = [
   {
     path: 'shop',
     component: ShopComponent,
+  },
+  {
+    path: 'landingpage',
+    component: LandingComponent,
   },
 ];
 
