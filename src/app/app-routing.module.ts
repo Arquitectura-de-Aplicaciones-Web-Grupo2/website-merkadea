@@ -14,11 +14,11 @@ import { ShopComponent } from './pages/shop/shop.component';
 import { LandingComponent } from './components/landing/landing.component';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   redirectTo: '/home',
-  //   pathMatch: 'full',
-  // },
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full',
+  },
   {
     path: 'home',
     component: HomeComponent,
