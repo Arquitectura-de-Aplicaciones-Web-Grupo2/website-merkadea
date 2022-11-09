@@ -2,11 +2,11 @@
     <mat-toolbar class="toolbar-section">
         <span class="span1">MERKADEA</span>
         <span class="spacer"></span>
-        <button mat-stroked-button class="profile">
+        <button mat-stroked-button class="profile" routerLink="edit-profile">
             <mat-icon>account_circle</mat-icon>
             Profile
         </button>
-        <button mat-stroked-button class = "home" routerLink="home/welcome-consumidor">
+        <button mat-stroked-button class = "home" routerLink="/home/welcome-consumidor">
             <mat-icon>home</mat-icon>
             Home
         </button>
@@ -14,13 +14,17 @@
             <mat-icon>shop</mat-icon>
             Shop
         </button>
-        <button mat-stroked-button class = "shopping-cart">
+        <button mat-stroked-button class = "shopping-cart" routerLink="payment:id">
             <mat-icon>shopping_cart</mat-icon>
             Cart
         </button>
-        <button mat-stroked-button class = "Locate-markets" routerLink="find/locate-market">
+        <button mat-stroked-button class = "Locate-markets" routerLink="/find/locate-market">
             <mat-icon> place </mat-icon>
             Find
+        </button>
+        <button mat-stroked-button class = "sign-out" routerLink="/">
+            <mat-icon>exit_to_app</mat-icon>
+            Sign Out
         </button>
     </mat-toolbar>
 </div>
