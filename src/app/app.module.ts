@@ -26,8 +26,14 @@ import { ToolbarConsumidorComponent } from './components/toolbar-consumidor/tool
 import { ElectionSectionComponent } from './components/election-section/election-section.component';
 import { BuscarNegocioComponent } from './components/buscar-negocio/buscar-negocio.component';
 import { RegisterScreenComponent } from './components/register-screen/register-screen.component';
-import { LoginScreenComponent } from './components/login-screen/login-screen.component';
-
+import { ProfileEditionComponent } from './components/profile-edition/profile-edition.component';
+import { PaymentComponent } from './components/payment/payment.component';
+import {MatStep, MatStepperModule} from '@angular/material/stepper';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { InitialScreenComponent } from './components/initial-screen/initial-screen.component';
+import { LoginConsumidorComponent } from './components/login-consumidor/login-consumidor.component';
+import { LoginComercianteComponent } from './components/login-comerciante/login-comerciante.component';
+import { RegisterComercianteComponent } from './components/register-comerciante/register-comerciante.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +46,12 @@ import { LoginScreenComponent } from './components/login-screen/login-screen.com
     ElectionSectionComponent,
     BuscarNegocioComponent,
     RegisterScreenComponent,
-    LoginScreenComponent
+    ProfileEditionComponent,
+    PaymentComponent,
+    InitialScreenComponent,
+    LoginConsumidorComponent,
+    LoginComercianteComponent,
+    RegisterComercianteComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +70,9 @@ import { LoginScreenComponent } from './components/login-screen/login-screen.com
     ReactiveFormsModule,
     HttpClientModule,
     GoogleMapsModule,
-    FormsModule
+    FormsModule,
+    MatStepperModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

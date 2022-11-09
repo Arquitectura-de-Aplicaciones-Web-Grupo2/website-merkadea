@@ -1,0 +1,42 @@
+h1{
+    margin-top: 2vh;
+    color: #FE8C00;
+    font-size: 40px;
+    font-weight:bolder;
+    letter-spacing: 2px;
+    margin-left: 1.5vh;
+}
+
+.mat-form-field{
+    border-color: black;
+}
+.producto{
+    font-size: 35px;
+    float: center;
+}
+
+.precio{
+    font-size: 35px;
+    float:right;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.confirmacion{
+    color:white;
+    width: 10%;
+    font-size: 20px;
+    background-color: #FE8C00;
+    margin-left: 1%;
+}
+
+.volver{
+    color:white;
+    width: 10%;
+    font-size: 20px;
+    background-color: #545454;
+    margin-left: 1%;
+}
+
