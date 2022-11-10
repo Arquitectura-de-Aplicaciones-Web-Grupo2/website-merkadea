@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
     this.userService
       .logout()
       .then(() => {
-        this.router.navigate(['/register']);
+        this.router.navigate(['/login']);
       })
       .catch((error) => console.error());
   }

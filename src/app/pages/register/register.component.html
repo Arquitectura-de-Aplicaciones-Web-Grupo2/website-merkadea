@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>Registro de usuario</h2>
+  <h1 class="fs-1">Registro de usuario</h1>
   <form [formGroup]="formReg" (ngSubmit)="onSubmit()">
     <div class="mb-3">
       <label class="form-label">Email</label>
@@ -9,6 +9,9 @@
       <label class="form-label">Password</label>
       <input type="password" class="form-control" formControlName="password" />
     </div>
-    <input type="submit" value="Enviar" />
+    <input type="submit" value="Registrar" class="btn btn-warning" />
   </form>
+  <button type="button" class="btn btn-primary" routerLink="/login">
+    Inica Sesion
+  </button>
 </div>

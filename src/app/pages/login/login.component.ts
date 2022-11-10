@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
       .login(this.formLogin.value)
       .then((response) => {
         console.log(response);
+        this.router.navigate(['/home']);
       })
       .catch((error) => console.log(error));
   }
