@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
 import { Product } from '../../models/product.model';
+import { UserService } from 'src/app/services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +14,11 @@ export class HomeComponent implements OnInit {
   limit = 10;
   offset = 0;
 
-  constructor(private productsService: ProductsService) {}
+  constructor(
+    private productsService: ProductsService,
+    private userService: UserService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     // this.productsService.getProductsByPage(10, 0).subscribe((data) => {
@@ -27,4 +33,12 @@ export class HomeComponent implements OnInit {
   //       this.offset += this.limit;
   //     });
   // }
+  onClick() {
+    this.userService
+      .logout()
+      .then(() => {
+        this.router.navigate(['/login']);
+      })
+      .catch((error) => console.error());
+  }
 }
