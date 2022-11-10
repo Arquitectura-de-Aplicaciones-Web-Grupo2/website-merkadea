@@ -23,19 +23,22 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-    ...canActivate(() => redirectUnauthorizedTo(['/register'])),
+    ...canActivate(() => redirectUnauthorizedTo(['/login'])),
   },
   {
     path: 'category/:id',
     component: CategoryComponent,
+    ...canActivate(() => redirectUnauthorizedTo(['/login'])),
   },
   {
     path: 'extraviada',
     component: NotFoundComponent,
+    ...canActivate(() => redirectUnauthorizedTo(['/login'])),
   },
   {
     path: 'carrito',
     component: MyCartComponent,
+    ...canActivate(() => redirectUnauthorizedTo(['/login'])),
   },
   {
     path: 'login',
@@ -48,14 +51,17 @@ const routes: Routes = [
   {
     path: 'recovery',
     component: RecoveryComponent,
+    ...canActivate(() => redirectUnauthorizedTo(['/login'])),
   },
   {
     path: 'profile',
     component: ProfileComponent,
+    ...canActivate(() => redirectUnauthorizedTo(['/login'])),
   },
   {
     path: 'shop',
     component: ShopComponent,
+    ...canActivate(() => redirectUnauthorizedTo(['/login'])),
   },
   {
     path: 'landingpage',
