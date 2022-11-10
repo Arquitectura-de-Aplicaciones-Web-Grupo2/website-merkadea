@@ -12,16 +12,18 @@ import { RecoveryComponent } from './pages/recovery/recovery.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ShopComponent } from './pages/shop/shop.component';
 import { LandingComponent } from './components/landing/landing.component';
+import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   redirectTo: '/home',
-  //   pathMatch: 'full',
-  // },
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full',
+  },
   {
     path: 'home',
     component: HomeComponent,
+    ...canActivate(() => redirectUnauthorizedTo(['/register'])),
   },
   {
     path: 'category/:id',
