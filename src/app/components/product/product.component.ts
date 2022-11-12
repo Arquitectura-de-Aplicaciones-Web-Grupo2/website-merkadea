@@ -10,27 +10,29 @@ import { Product } from '../../models/product.model';
 // implements OnInit
 export class ProductComponent {
   @Input() product: Product = {
-    id: '',
+    productId: '',
+    name: '',
+    categoryId: '',
     price: 0,
-    images: [],
-    title: '',
+    stock: 0,
+    active: null,
     category: {
-      id: '',
-      name: '',
-      typeImg: '',
+      categoryId: '',
+      category: '',
+      active: null,
     },
-    description: '',
   };
   @Output() addedProduct = new EventEmitter<Product>();
   @Output() showProduct = new EventEmitter<string>(); ///id aun que tambien
   constructor() {}
-
+  imgDefault =
+    'https://media.justo.mx/__sized__/products/VERDURAS_10698_Jitomate_Saladette_1-thumbnail-255x255-70.jpg';
   // ngOnInit(): void {}
 
   onAddToCart() {
     this.addedProduct.emit(this.product);
   }
   onShowDetail() {
-    this.showProduct.emit(this.product.id);
+    this.showProduct.emit(this.product.productId);
   }
 }

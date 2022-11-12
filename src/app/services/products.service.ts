@@ -13,11 +13,13 @@ import { checkTime } from '../interceptors/time.interceptor';
 export class ProductsService {
   private apiUrl = 'https://young-sands-07814.herokuapp.com/api/products';
   private apiUrll = 'https://young-sands-07814.herokuapp.com/api';
+  private apiM = 'http://localhost:8090/merkadea-market/api/products/all';
+  private apiMM = 'https://merkadeamarket.herokuapp.com/merkadea-market/api';
 
   constructor(private http: HttpClient) {}
   //devolver todos los productos
   getAllProducts() {
-    return this.http.get<Product[]>(this.apiUrl);
+    return this.http.get<Product[]>(this.apiM);
   }
   getByCategory(categoryId: string, limit: number, offset: number) {
     return this.http.get<Product[]>(

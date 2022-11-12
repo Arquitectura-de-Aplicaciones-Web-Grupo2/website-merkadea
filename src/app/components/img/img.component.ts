@@ -22,11 +22,12 @@ export class ImgComponent
   @Input()
   set changeImg(newImg: string) {
     this.img = newImg;
-    console.log('change just img => ', this.img);
+    console.log('change just img jhimy => ', this.img);
   }
   @Input() alt: string = '';
   @Output() loaded = new EventEmitter<string>();
-  imgDefault = '../../../assets/images/default.png';
+  imgDefault =
+    'https://img.lovepik.com/free-png/20210923/lovepik-hand-drawn-cartoon-yellow-little-stars-png-image_401176018_wh1200.png';
 
   counter = 0;
   counterFn: number | undefined;

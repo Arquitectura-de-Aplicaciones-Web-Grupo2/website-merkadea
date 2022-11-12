@@ -16,20 +16,22 @@ export class ProductsComponent {
   //lista del carrito
   myShoppingCart: Product[] = [];
   total = 0;
+  productss: Product[] = [];
   @Input() products: Product[] = [];
   @Output() loadMore = new EventEmitter();
   showProductDetail = false;
   productChosen: Product = {
-    id: '',
+    productId: '',
+    name: '',
+    categoryId: '',
     price: 0,
-    images: [],
-    title: '',
+    stock: 0,
+    active: null,
     category: {
-      id: '',
-      name: '',
-      typeImg: '',
+      categoryId: '',
+      category: '',
+      active: null,
     },
-    description: '',
   };
   limit = 10;
   offset = 0;
@@ -42,12 +44,13 @@ export class ProductsComponent {
   ) {
     this.myShoppingCart = storeService.getShoppingCart();
   }
+  imgDefault = '../../../assets/images/default.png';
 
-  // ngOnInit(): void {
-  //   this.productsService.getProductsByPage(10, 0).subscribe((data) => {
-  //     this.products = data;
-  //   });
-  // }
+  ngOnInit(): void {
+    this.productsService.getAllProducts().subscribe((data) => {
+      this.productss = data;
+    });
+  }
   onAddToShoppingCart(product: Product) {
     this.storeService.addProduct(product);
     // this.myShoppingCart.push(product);
@@ -67,43 +70,43 @@ export class ProductsComponent {
   }
   //crear un nuevoo producto usando la API
   createNewProduct() {
-    const product: CreateProductDTO = {
-      title: 'Nuevo producto',
-      description: 'bla bla bla',
-      images: ['https://placeimg.com/640/480/any?random=${Math.random()}'],
-      price: 1000,
-      categoryId: 2,
-    };
-    this.productsService.create(product).subscribe((data) => {
-      this.products.unshift(data);
-    });
+    // const product: CreateProductDTO = {
+    //   title: 'Nuevo producto',
+    //   description: 'bla bla bla',
+    //   images: ['https://placeimg.com/640/480/any?random=${Math.random()}'],
+    //   price: 1000,
+    //   categoryId: 2,
+    // };
+    // this.productsService.create(product).subscribe((data) => {
+    //   this.products.unshift(data);
+    // });
   }
   updateProduct() {
     //buenas practicas
-    const changes: UpdateProductDTO = {
-      title: 'Nuevo titu',
-    };
-    const id = this.productChosen.id;
-    this.productsService.update(id, changes).subscribe((data) => {
-      //chapa en que posi esta tal product
-      const productIndex = this.products.findIndex(
-        (item) => item.id === this.productChosen.id
-      );
-      this.products[productIndex] = data;
-    });
+    // const changes: UpdateProductDTO = {
+    //   title: 'Nuevo titu',
+    // };
+    // const id = this.productChosen.id;
+    // this.productsService.update(id, changes).subscribe((data) => {
+    //   //chapa en que posi esta tal product
+    //   const productIndex = this.products.findIndex(
+    //     (item) => item.id === this.productChosen.id
+    //   );
+    //   this.products[productIndex] = data;
+    // });
   }
   deleteProduct() {
-    const id = this.productChosen.id;
-    this.productsService.delete(id).subscribe(() => {
-      const productIndex = this.products.findIndex(
-        (item) => item.id === this.productChosen.id
-      );
-      this.products.splice(productIndex, 1);
-      this.showProductDetail = false;
-    });
+    // const id = this.productChosen.id;
+    // this.productsService.delete(id).subscribe(() => {
+    //   const productIndex = this.products.findIndex(
+    //     (item) => item.id === this.productChosen.id
+    //   );
+    //   this.products.splice(productIndex, 1);
+    //   this.showProductDetail = false;
+    // });
   }
   onLoadMore() {
-    this.loadMore.emit();
+    // this.loadMore.emit();
   }
 
   // loadMore() {
