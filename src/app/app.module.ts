@@ -30,7 +30,8 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import {MatInputModule} from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,6 +60,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     SwiperModule,
     ReactiveFormsModule,
+    MatInputModule,
+    MatCardModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
   ],

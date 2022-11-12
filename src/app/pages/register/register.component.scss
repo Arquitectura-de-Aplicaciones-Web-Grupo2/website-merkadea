@@ -1,0 +1,108 @@
+.circulo{
+    width: 566px;
+    height: 522px;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #FE8C00 0%, #F83600 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-left: 20vh;
+    top: 50%;
+    transform: translateY(-50%);
+    word-wrap: break-word;
+}
+
+p{
+    color: white;
+    font-size: 64px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    line-height: 77px;
+    word-wrap: break-word;
+    font-weight:bolder;
+}
+
+.container{
+    margin-top: 2vh;
+    float:right;
+    top: -120%;
+    transform: translateY(120%);
+    margin-right: 25%;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.form-control{
+    background: #D9D9D9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+h1{
+    text-align: center;
+}
+
+.btn-login{
+    color:white;
+    font-size: 20px;
+    background-color: #FE8C00;
+    border-color: transparent;
+    width: 45%;
+    border-radius: 5%;
+    font-weight:bolder;
+    float: right;
+}
+.btn-register{
+    color:white;
+    font-size: 20px;
+    background-color: #FE8C00;
+   
+    border-color: transparent;
+    width: 45%;
+    border-radius: 5%;
+    font-weight:bolder;
+    float: left;
+}
+@media only screen and (max-width:1000px){
+    .circulo{
+        background: linear-gradient(90deg, #FE8C00 0%, #F83600 100%);
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        margin-left: 0;
+    }
+    p{
+        -webkit-text-fill-color: transparent;
+    }    
+    .form-control{
+        background: #D9D9D9;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        margin-left: 25%;
+
+    }
+
+    .container{
+       margin-top: -10%;
+    }
+    h1{
+        margin-left: 50%;
+        font-weight: bolder;
+    }
+
+    .btn-login{
+        width: 50%;
+        background-color: #356212;
+        margin-top: 5%;
+    }
+    .btn-register{
+        width: 50%;
+        background-color: #356212;
+        margin-left: 50%;
+        
+    }
+}
