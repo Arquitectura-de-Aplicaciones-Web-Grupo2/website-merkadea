@@ -1,17 +1,21 @@
+<div class="circulo">
+  <p> Bienvenid@ a MERKADEA</p>
+</div>
+
 <div class="container">
-  <h1 class="fs-1">Registro de usuario</h1>
+  <h1 class="fs-1">REGISTRO</h1>
   <form [formGroup]="formReg" (ngSubmit)="onSubmit()">
     <div class="mb-3">
       <label class="form-label">Email</label>
-      <input type="text" class="form-control" formControlName="email" />
+      <input matInput type="text" class="form-control" formControlName="email" placeholder="Correo Electronico"/>
     </div>
     <div class="mb-3">
       <label class="form-label">Password</label>
-      <input type="password" class="form-control" formControlName="password" />
+      <input type="password" class="form-control" formControlName="password" placeholder="Contraseña" />
     </div>
-    <input type="submit" value="Registrar" class="btn btn-warning" />
+    <input type="submit" value="Registrar" class="btn-register" />
   </form>
-  <button type="button" class="btn btn-primary" routerLink="/login">
-    Inica Sesion
+  <button type="button" class="btn-login" routerLink="/login">
+    Inicia Sesion
   </button>
 </div>

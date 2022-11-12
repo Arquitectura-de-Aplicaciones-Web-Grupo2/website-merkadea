@@ -1,5 +1,8 @@
-<div class="container">
-  <h2>Login de usuario</h2>
+
+
+<mat-card class = "login-card">
+  <div class="container">
+  <h2>Bienvienido a Merkade@</h2>
   <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
     <div class="mb-3">
       <label class="form-label">Email</label>
@@ -9,12 +12,21 @@
       <label class="form-label">Password</label>
       <input type="password" class="form-control" formControlName="password" />
     </div>
-    <input type="submit" class="btn btn-warning" value="Enviar" />
+    <input type="submit" class="btn-enviar" value="Enviar" />
   </form>
-  <button type="button" class="btn btn-danger" (click)="onClick()">
-    Login With Google
-  </button>
-  <button type="button" class="btn btn-primary" routerLink="/register">
+  <p class="google-login">
+    Inicia sesion con google:
+    <button type="button" class="btn-glogin" (click)="onClick()">
+      <i class="fa fa-google" aria-hidden="true"></i>
+      Google
+    </button>
+  </p>
+  <p class = "no-account">
+    No tienes una cuenta?
+    <button type="button" class="btn-register" routerLink="/register">
     Registrate
   </button>
+</p>
 </div>
+</mat-card>
+
