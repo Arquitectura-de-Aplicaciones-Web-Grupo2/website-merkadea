@@ -16,9 +16,9 @@
   <div class="side-menu" [class.active]="activeMenu">
     <button (click)="toggleMenu()">Close</button>
     <ul>
-      <li><a href="">All</a></li>
-      <li><a href="">Clothes</a></li>
-      <li><a href="">Electronics</a></li>
+      <li><a routerLink="/shop" href="">All</a></li>
+      <li><a routerLink="/home" href="">Home</a></li>
+      <li><a routerLink="/category/1" href="">Category 1</a></li>
     </ul>
   </div>
 </div>
@@ -29,9 +29,19 @@
         <img id="logoo" src="../../../assets/images/logo.png" alt="logo" />
       </a>
       <ul>
-        <li><a href="">All</a></li>
-        <li><a href="">Clothes</a></li>
-        <li><a href="">Electronics</a></li>
+        <button routerLink="/shop" type="button" class="btn btn-danger me-4">
+          Shop
+        </button>
+        <button routerLink="/home" type="button" class="btn btn-danger me-4">
+          Home
+        </button>
+        <button
+          routerLink="/category/1"
+          type="button"
+          class="btn btn-danger me-4"
+        >
+          Category
+        </button>
       </ul>
     </nav>
     <div class="info">

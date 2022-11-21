@@ -1,0 +1,13 @@
+<div class="page-product">
+  <button (click)="goToBack()">Back</button>
+  <div class="detail" *ngIf="product">
+    <div class="gallery">
+      <app-img [changeImg]="product.image"></app-img>
+    </div>
+    <div>
+      <h1>{{ product?.name }}</h1>
+      <h2>{{ product?.price | currency }}</h2>
+      <h2>{{ product?.category.name | currency }}</h2>
+    </div>
+  </div>
+</div>
