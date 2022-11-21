@@ -20,16 +20,18 @@ export class ProductsComponent {
   @Output() loadMore = new EventEmitter();
   showProductDetail = false;
   productChosen: Product = {
-    id: '',
+    productId: '',
+    name: '',
+    categoryId: 0,
     price: 0,
-    images: [],
-    title: '',
+    stock: 0,
+    active: true,
+    image: '',
     category: {
-      id: '',
+      categoryId: '',
       name: '',
-      typeImg: '',
+      description: '',
     },
-    description: '',
   };
   limit = 10;
   offset = 0;
@@ -68,35 +70,39 @@ export class ProductsComponent {
   //crear un nuevoo producto usando la API
   createNewProduct() {
     const product: CreateProductDTO = {
-      title: 'Nuevo producto',
-      description: 'bla bla bla',
-      images: ['https://placeimg.com/640/480/any?random=${Math.random()}'],
-      price: 1000,
+      name: 'Nuevo producto',
       categoryId: 2,
+      price: 1000,
+      stock: 15,
+      active: true,
+      image:
+        'https://ae01.alicdn.com/kf/S946a3c79cc9f4f1cbf929856e75747d0G/Cortadora-de-pelo-el-ctrica-USB-todo-en-uno-cortadora-de-pelo-recargable-con-cabeza-de.jpg_Q90.jpg_.webp',
     };
     this.productsService.create(product).subscribe((data) => {
       this.products.unshift(data);
     });
   }
+
   updateProduct() {
     //buenas practicas
     const changes: UpdateProductDTO = {
-      title: 'Nuevo titu',
+      image: 'https://placeimg.com/640/480/any?random=$%7BMath.random()%7D',
+      name: 'Producto editado',
     };
-    const id = this.productChosen.id;
+    const id = this.productChosen.productId;
     this.productsService.update(id, changes).subscribe((data) => {
       //chapa en que posi esta tal product
       const productIndex = this.products.findIndex(
-        (item) => item.id === this.productChosen.id
+        (item) => item.productId === this.productChosen.productId
       );
       this.products[productIndex] = data;
     });
   }
   deleteProduct() {
-    const id = this.productChosen.id;
+    const id = this.productChosen.productId;
     this.productsService.delete(id).subscribe(() => {
       const productIndex = this.products.findIndex(
-        (item) => item.id === this.productChosen.id
+        (item) => item.productId === this.productChosen.productId
       );
       this.products.splice(productIndex, 1);
       this.showProductDetail = false;

@@ -13,11 +13,12 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { ShopComponent } from './pages/shop/shop.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/landingpage',
+    redirectTo: '/home',
     pathMatch: 'full',
   },
   {
@@ -29,6 +30,11 @@ const routes: Routes = [
     path: 'category/:id',
     component: CategoryComponent,
     ...canActivate(() => redirectUnauthorizedTo(['/login'])),
+  },
+  {
+    path: 'product/:id',
+    component: ProductDetailComponent,
+    ...canActivate(() => redirectUnauthorizedTo(['/register'])),
   },
   {
     path: 'extraviada',
@@ -66,6 +72,10 @@ const routes: Routes = [
   {
     path: 'landingpage',
     component: LandingComponent,
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
   },
 ];
 

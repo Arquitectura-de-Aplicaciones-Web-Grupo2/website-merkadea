@@ -32,6 +32,7 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +53,7 @@ import {MatCardModule} from '@angular/material/card';
     ProfileComponent,
     ShopComponent,
     LandingComponent,
+    ProductDetailComponent,
   ],
   imports: [
     BrowserModule,

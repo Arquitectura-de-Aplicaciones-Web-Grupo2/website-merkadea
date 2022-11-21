@@ -11,8 +11,6 @@ import { Product } from 'src/app/models/product.model';
 export class CategoryComponent implements OnInit {
   categoryId: string | null = null;
   products: Product[] = [];
-  limit = 10;
-  offset = 0;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,7 +22,7 @@ export class CategoryComponent implements OnInit {
       this.categoryId = params.get('id');
       if (this.categoryId) {
         this.productsService
-          .getByCategory(this.categoryId, this.limit, this.offset)
+          .getByCategory(this.categoryId)
           .subscribe((data) => {
             this.products = data;
           });
@@ -34,12 +32,9 @@ export class CategoryComponent implements OnInit {
 
   onLoadMore() {
     if (this.categoryId) {
-      this.productsService
-        .getByCategory(this.categoryId, this.limit, this.offset)
-        .subscribe((data) => {
-          this.products = this.products.concat(data);
-          this.offset += this.limit;
-        });
+      this.productsService.getByCategory(this.categoryId).subscribe((data) => {
+        this.products = this.products.concat(data);
+      });
     }
   }
 }
