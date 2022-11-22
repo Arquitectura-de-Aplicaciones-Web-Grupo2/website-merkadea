@@ -33,6 +33,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { ListCategoryComponent } from './components/list-category/list-category.component';
+import { ComprasComponent } from './components/compras/compras.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +56,8 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
     ShopComponent,
     LandingComponent,
     ProductDetailComponent,
+    ListCategoryComponent,
+    ComprasComponent,
   ],
   imports: [
     BrowserModule,
