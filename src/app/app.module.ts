@@ -35,6 +35,7 @@ import {MatCardModule} from '@angular/material/card';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { ListCategoryComponent } from './components/list-category/list-category.component';
 import { ComprasComponent } from './components/compras/compras.component';
+import { AngularMaterialModule } from './components/shared/angular-material.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +69,7 @@ import { ComprasComponent } from './components/compras/compras.component';
     ReactiveFormsModule,
     MatInputModule,
     MatCardModule,
+    AngularMaterialModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
   ],
