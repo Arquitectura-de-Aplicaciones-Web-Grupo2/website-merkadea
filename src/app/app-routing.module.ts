@@ -7,12 +7,12 @@ import { HomeComponent } from './website/pages/home/home.component';
 import { NotFoundComponent } from './website/pages/not-found/not-found.component';
 import { CategoryComponent } from './website/pages/category/category.component';
 import { MyCartComponent } from './website/pages/my-cart/my-cart.component';
-import { LoginComponent } from './website/pages/login/login.component';
-import { RegisterComponent } from './website/pages/register/register.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 import { RecoveryComponent } from './website/pages/recovery/recovery.component';
 import { ProfileComponent } from './website/pages/profile/profile.component';
 import { ShopComponent } from './website/pages/shop/shop.component';
-import { LandingComponent } from './website/components/landing/landing.component';
+import { LandingComponent } from './landing/landing.component';
 import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { ProductDetailComponent } from './website/pages/product-detail/product-detail.component';
 
