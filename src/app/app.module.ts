@@ -7,9 +7,9 @@ import { SwiperModule } from 'swiper/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ImgComponent } from './website/components/img/img.component'; 
-import { ProductComponent } from './website/components/product/product.component'; 
-import { ProductsComponent } from './website/components/products/products.component'; 
+import { ImgComponent } from './website/components/img/img.component';
+import { ProductComponent } from './website/components/product/product.component';
+import { ProductsComponent } from './website/components/products/products.component';
 import { NavComponent } from './website/components/nav/nav.component';
 import { ReversePipe } from './website/pipes/reverse.pipe';
 import { TimeAgoPipe } from './website/pipes/time-ago.pipe';
@@ -33,15 +33,22 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { ProductDetailComponent } from './website/pages/product-detail/product-detail.component';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 import { PurchasesComponent } from './website/pages/purchases/purchases.component';
 import { RegisterProductComponent } from './website/pages/register-product/register-product.component';
-import { MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { FormGroup } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
-@NgModule({
+import { BannerComponent } from './website/pages/banner/banner.component';
 
+import { CategorycrudComponent } from './website/pages/categorycrud/categorycrud.component';
+
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
+@NgModule({
   declarations: [
     AppComponent,
     ImgComponent,
@@ -64,6 +71,10 @@ import { MatSelectModule } from '@angular/material/select';
     ProductDetailComponent,
     PurchasesComponent,
     RegisterProductComponent,
+
+    BannerComponent,
+
+    CategorycrudComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,10 +86,13 @@ import { MatSelectModule } from '@angular/material/select';
     MatInputModule,
     MatCardModule,
     MatIconModule,
-    MatButtonModule, 
+    MatButtonModule,
     MatDialogModule,
     FormsModule,
     MatSelectModule,
+    MatSlideToggleModule,
+    MatTableModule,
+    MatPaginatorModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
   ],
