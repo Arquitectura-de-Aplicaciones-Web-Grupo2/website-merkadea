@@ -1,0 +1,24 @@
+<!-- <br /> -->
+<button (click)="openDialog()"> Crear</button> -->
+<div class="products--grid">
+  <app-product
+    [product]="product"
+    *ngFor="let product of products"
+    (addedProduct)="onAddToShoppingCart($event)"
+    (showProduct)="onShowDetail($event)"
+  ></app-product>
+  <button (click)="onLoadMore()" class= "load"> Ver más </button>
+</div>
+
+<div class="product-detail" [class.active]="showProductDetail">
+  <div *ngIf="productChosen">
+    <button (click)="toggleProductDetail()">Cerrar</button>
+    <h1>{{ productChosen.name }}</h1>
+    <h1>{{ productChosen.productId }}</h1>
+    <app-img [changeImg]="productChosen.image"></app-img>
+
+    <p>{{ productChosen.category.description }}</p>
+    <button (click)="updateProduct()"> Editar </button>
+    <button (click)="deleteProduct()"> Eliminar </button> --> -->
+  </div>
+</div>

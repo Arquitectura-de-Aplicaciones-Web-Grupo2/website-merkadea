@@ -7,33 +7,41 @@ import { SwiperModule } from 'swiper/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ImgComponent } from './components/img/img.component';
-import { ProductComponent } from './components/product/product.component';
-import { ProductsComponent } from './components/products/products.component';
-import { NavComponent } from './components/nav/nav.component';
-import { ReversePipe } from './pipes/reverse.pipe';
-import { TimeAgoPipe } from './pipes/time-ago.pipe';
-import { HighlightDirective } from './directives/highlight.directive';
+import { ImgComponent } from './website/components/img/img.component'; 
+import { ProductComponent } from './website/components/product/product.component'; 
+import { ProductsComponent } from './website/components/products/products.component'; 
+import { NavComponent } from './website/components/nav/nav.component';
+import { ReversePipe } from './website/pipes/reverse.pipe';
+import { TimeAgoPipe } from './website/pipes/time-ago.pipe';
+import { HighlightDirective } from './website/directives/highlight.directive';
 import { TimeInterceptor } from './interceptors/time.interceptor';
 import { TokenInterceptor } from './interceptors/token.interceptor';
-import { HomeComponent } from './pages/home/home.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { CategoryComponent } from './pages/category/category.component';
-import { MyCartComponent } from './pages/my-cart/my-cart.component';
-import { LoginComponent } from './pages/login/login.component';
-import { RegisterComponent } from './pages/register/register.component';
-import { RecoveryComponent } from './pages/recovery/recovery.component';
-import { ProfileComponent } from './pages/profile/profile.component';
-import { ShopComponent } from './pages/shop/shop.component';
-import { LandingComponent } from './components/landing/landing.component';
+import { HomeComponent } from './website/pages/home/home.component';
+import { NotFoundComponent } from './website/pages/not-found/not-found.component';
+import { CategoryComponent } from './website/pages/category/category.component';
+import { MyCartComponent } from './website/pages/my-cart/my-cart.component';
+import { LoginComponent } from './website/pages/login/login.component';
+import { RegisterComponent } from './website/pages/register/register.component';
+import { RecoveryComponent } from './website/pages/recovery/recovery.component';
+import { ProfileComponent } from './website/pages/profile/profile.component';
+import { ShopComponent } from './website/pages/shop/shop.component';
+import { LandingComponent } from './website/components/landing/landing.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth, getAuth } from '@angular/fire/auth';
-import { ReactiveFormsModule } from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
-import {MatCardModule} from '@angular/material/card';
-import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { ProductDetailComponent } from './website/pages/product-detail/product-detail.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import { PurchasesComponent } from './website/pages/purchases/purchases.component';
+import { RegisterProductComponent } from './website/pages/register-product/register-product.component';
+import { MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { FormGroup } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 @NgModule({
+
   declarations: [
     AppComponent,
     ImgComponent,
@@ -54,6 +62,8 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
     ShopComponent,
     LandingComponent,
     ProductDetailComponent,
+    PurchasesComponent,
+    RegisterProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +74,11 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
     ReactiveFormsModule,
     MatInputModule,
     MatCardModule,
+    MatIconModule,
+    MatButtonModule, 
+    MatDialogModule,
+    FormsModule,
+    MatSelectModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
   ],

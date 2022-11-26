@@ -1,0 +1,10 @@
+
+<a [routerLink]="['/product', product.productId]">
+  <app-img [changeImg]="product.image"></app-img>
+</a>
+<h2>{{ product.price | currency: "PEN" }}</h2>
+<p>{{ product.name }}</p>
+<p>{{ product.category.name }}</p>
+<!-- <p appHighlight>{{producto.description}}</p> -->
+<button class = "ver-detalle"(click)="onShowDetail()">Ver detalle</button>
+<button class = "agregar-carrito" (click)="onAddToCart()"> Añadir al carrito</button>

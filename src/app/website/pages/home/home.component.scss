@@ -1,0 +1,120 @@
+button {
+    border-color: transparent;
+    background: #E1DCDC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    color: Black;
+    width: 100%;
+    margin-top: 2%;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;   
+}
+
+.container{
+    display:grid;
+    column-gap: 2%;
+    row-gap: 2%;
+    width: 200%;
+}
+
+.lacteos-huevos{
+    grid-column: 1;
+    grid-row: 1; 
+}
+.despensa{
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.cuidado-personal{
+    grid-column: 2;
+    grid-row: 1;
+
+}
+.pasteleria{
+    grid-column: 4;
+    grid-row: 1;
+}
+.licores{
+    grid-column: 3;
+    grid-row: 2;   
+}
+.carnes-pescados{
+    grid-column: 3;
+    grid-row: 1;
+}
+.bebidas{
+    grid-column: 4;
+    grid-row: 2;
+}
+.frutas-verduras{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.log-out{
+    width: 10%;
+    float:right;
+}
+
+h2{
+    text-align: center;
+    font-size: 32px;
+}
+
+@media only screen and (max-width: 900px){
+    .container{
+        display:grid;
+        grid-template-columns: 150px 150px ;
+        grid-template-rows: 200px 200px 200px 200px ;
+        grid-row: auto auto;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        margin-left: 10%;
+    }
+    button{
+        width: 100%;
+        font-size: 25px;
+        color:black
+    }
+
+    .lacteos-huevos{
+        grid-column: 1;
+        grid-row: 1; 
+    }
+    .despensa{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .cuidado-personal{
+        grid-column: 1;
+        grid-row: 3;
+    
+    }
+    .pasteleria{
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .licores{
+        grid-column: 2;
+        grid-row: 3;   
+    }
+    .carnes-pescados{
+        grid-column: 2 ;
+        grid-row: 4;
+    }
+    .bebidas{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .frutas-verduras{
+        grid-column: 2;
+        grid-row:2  ;
+    }
+    h2{
+        text-align: center;
+    }
+}
+

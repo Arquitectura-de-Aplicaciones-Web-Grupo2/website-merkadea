@@ -29,6 +29,12 @@ export class ProductsService {
       `${this.apiV2}/products/category/${categoryId}`
     );
   }
+
+  getByCategoryName(categoryname: string) {
+    return this.http.get<Product[]>(
+      `${this.apiV2}/products/category/${categoryname}`
+    );
+  }
   //producto especifico
   getProduct(id: string) {
     return this.http.get<Product>(`${this.apiV2}/products/${id}`);
