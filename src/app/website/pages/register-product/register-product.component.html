@@ -1,0 +1,56 @@
+<h1 mat-dialog-title>Registrar Producto</h1>
+<div mat-dialog-content>
+    <form [formGroup] = "myForm">
+
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre del Producto</mat-label>
+            <input formControlName="name" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label> Categoria </mat-label>
+            <mat-select formControlName="categoryId" placeholder="Category">
+                <mat-option value="1">Frutas y Verduras</mat-option>
+                <mat-option value="2">Pasteleria</mat-option>
+                <mat-option value="3">Carnes y Pescados</mat-option>
+                <mat-option value="4"> Lacteos y Huevos</mat-option>
+                <mat-option value="5"> Bebidas</mat-option>
+                <mat-option value="6"> Licores</mat-option>
+                <mat-option value="7"> Cuidado Personal </mat-option>
+                <mat-option value="8"> Despensa</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Price</mat-label>
+            <input formControlName="price" matInput>
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline">
+            <mat-label> Stock </mat-label>
+            <input formControlName="stock" matInput type = "number">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label> Image </mat-label>
+            <input formControlName="image" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label> Active </mat-label>
+            <mat-select formControlName="active" placeholder="active">
+                <mat-option value="true"> Activo </mat-option>
+                <mat-option value="false"> No Activo</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div mat-dialog-action [align]="'end'">
+            <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+            <button style="margin-left: 8px;" mat-raised-button color="primary" (click)= "createNewProduct()">{{actionBtn}}</button>
+        </div>
+
+    </form>
+    
+</div>
+
+

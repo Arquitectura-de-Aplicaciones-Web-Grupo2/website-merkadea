@@ -29,14 +29,19 @@ import { LandingComponent } from './website/components/landing/landing.component
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth, getAuth } from '@angular/fire/auth';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { ProductDetailComponent } from './website/pages/product-detail/product-detail.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { PurchasesComponent } from './website/pages/purchases/purchases.component';
+import { RegisterProductComponent } from './website/pages/register-product/register-product.component';
+import { MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { FormGroup } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 @NgModule({
+
   declarations: [
     AppComponent,
     ImgComponent,
@@ -58,6 +63,7 @@ import { PurchasesComponent } from './website/pages/purchases/purchases.componen
     LandingComponent,
     ProductDetailComponent,
     PurchasesComponent,
+    RegisterProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,6 +76,9 @@ import { PurchasesComponent } from './website/pages/purchases/purchases.componen
     MatCardModule,
     MatIconModule,
     MatButtonModule, 
+    MatDialogModule,
+    FormsModule,
+    MatSelectModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
   ],

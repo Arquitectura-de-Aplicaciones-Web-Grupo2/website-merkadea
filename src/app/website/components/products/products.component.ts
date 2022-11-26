@@ -3,6 +3,8 @@ import { StoreService } from 'src/app/services/store.service';
 import { ProductsService } from 'src/app/services/products.service';
 import { CreateProductDTO, UpdateProductDTO } from 'src/app/models/product.model';
 import { Product } from 'src/app/models/product.model';
+import { RegisterProductComponent } from '../../pages/register-product/register-product.component';
+import { MatDialog} from '@angular/material/dialog';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -37,7 +39,8 @@ export class ProductsComponent {
 
   constructor(
     private storeService: StoreService,
-    private productsService: ProductsService
+    private productsService: ProductsService,
+    private dialog: MatDialog
   ) {
     this.myShoppingCart = storeService.getShoppingCart();
   }
@@ -108,7 +111,15 @@ export class ProductsComponent {
   onLoadMore() {
     this.loadMore.emit();
   }
-
+  openDialog() {
+    this.dialog.open(RegisterProductComponent, {
+      width: '30%'
+    }).afterClosed().subscribe(val => {
+      if (val === 'save') {
+        this.productsService.getAllProducts();
+      }
+    })
+  }
   // loadMore() {
   //   this.productsService
   //     .getProductsByPage(this.limit, this.offset)
