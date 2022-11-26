@@ -17,12 +17,10 @@ import { CategoriaService } from 'src/app/services/categoria.service';
 export class CategorycrudComponent implements OnInit {
   displayedColumns: string[] = ['id', 'name', 'description'];
   dataSource = new MatTableDataSource<Categoria>();
+
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
-  constructor(
-    private categoriaService: CategoriaService,
-    private snackBar: MatSnackBar
-  ) {}
+  constructor(private categoriaService: CategoriaService) {}
 
   ngOnInit(): void {
     this.getCategories();
@@ -43,15 +41,6 @@ export class CategorycrudComponent implements OnInit {
   filterCategory(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
-
-  openSnackBar(
-    message: string,
-    action: string
-  ): MatSnackBarRef<SimpleSnackBar> {
-    return this.snackBar.open(message, action, {
-      duration: 2000,
-    });
   }
 
   // exportExcel() {

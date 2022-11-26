@@ -15,7 +15,7 @@ import { LandingComponent } from './website/components/landing/landing.component
 import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { ProductDetailComponent } from './website/pages/product-detail/product-detail.component';
 import { SwiperModule } from 'swiper/angular';
-import { NewCategoryComponent } from './website/pages/new-category/new-category.component';
+
 import { CategorycrudComponent } from './website/pages/categorycrud/categorycrud.component';
 
 const routes: Routes = [

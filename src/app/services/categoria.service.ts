@@ -13,4 +13,14 @@ export class CategoriaService {
       'https://versiondos.herokuapp.com/merkadeam-market/api/categorys/alll'
     );
   }
+  saveCategorie(body: any) {
+    const endpoint =
+      'https://versiondos.herokuapp.com/merkadeam-market/api/categorys/save';
+    return this.http.post<Categoria>(endpoint, body);
+  }
+
+  deleteCategorie(id: any) {
+    const endpoint = `https://versiondos.herokuapp.com/merkadeam-market/api/categorys/delete/${id}`;
+    return this.http.delete<Categoria>(endpoint);
+  }
 }

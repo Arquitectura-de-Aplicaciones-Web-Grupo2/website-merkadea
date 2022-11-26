@@ -41,8 +41,12 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { FormGroup } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { BannerComponent } from './website/pages/banner/banner.component';
-import { NewCategoryComponent } from './website/pages/new-category/new-category.component';
+
 import { CategorycrudComponent } from './website/pages/categorycrud/categorycrud.component';
+
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -69,7 +73,7 @@ import { CategorycrudComponent } from './website/pages/categorycrud/categorycrud
     RegisterProductComponent,
 
     BannerComponent,
-    NewCategoryComponent,
+
     CategorycrudComponent,
   ],
   imports: [
@@ -86,6 +90,9 @@ import { CategorycrudComponent } from './website/pages/categorycrud/categorycrud
     MatDialogModule,
     FormsModule,
     MatSelectModule,
+    MatSlideToggleModule,
+    MatTableModule,
+    MatPaginatorModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
   ],
