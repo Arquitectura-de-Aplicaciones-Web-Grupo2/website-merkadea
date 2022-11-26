@@ -14,13 +14,28 @@
     </div>
   </div>
   <div class="side-menu" [class.active]="activeMenu">
-    <button (click)="toggleMenu()" class = "close">
+    <button (click)="toggleMenu()" class="close">
       <mat-icon>close</mat-icon>
     </button>
     <ul>
-      <li><a routerLink="/shop" href=""><mat-icon>shopping_cart</mat-icon> Comprar </a></li>
-      <li><a routerLink="/home" href=""><mat-icon>home</mat-icon> Inicio </a></li>
-      <li><a routerLink="/login" href=""><mat-icon>exit_to_app</mat-icon> Cerrar Sesión </a></li>
+      <li>
+        <a routerLink="/shop" href=""
+          ><mat-icon>shopping_cart</mat-icon> Comprar
+        </a>
+      </li>
+      <li>
+        <a routerLink="/home" href=""><mat-icon>home</mat-icon> Inicio </a>
+      </li>
+      <li>
+        <a routerLink="/categoria" href=""
+          ><mat-icon>home</mat-icon> Crud Categoria
+        </a>
+      </li>
+      <li>
+        <a routerLink="/login" href=""
+          ><mat-icon>exit_to_app</mat-icon> Cerrar Sesión
+        </a>
+      </li>
     </ul>
   </div>
 </div>
@@ -33,24 +48,32 @@
       </a>
       <ul>
         <button mat-stroked-button routerLink="/shop" type="button">
-          <mat-icon class = "shopping-cart2">shopping_cart</mat-icon>
+          <mat-icon class="shopping-cart2">shopping_cart</mat-icon>
           Comprar
         </button>
         <button mat-stroked-button routerLink="/home" type="button">
           <mat-icon>home</mat-icon>
           Inicio
         </button>
-        <button mat-stroked-button type="button"  (click)="onClick()" class = "log-out">
+        <button mat-stroked-button routerLink="/categoria" type="button">
+          <mat-icon>home</mat-icon>
+          Crud Categoria
+        </button>
+        <button
+          mat-stroked-button
+          type="button"
+          (click)="onClick()"
+          class="log-out"
+        >
           <mat-icon>exit_to_app</mat-icon>
           Cerrar Sesión
         </button>
       </ul>
     </nav>
     <div class="info">
-      
       <div class="cart">
         <a href="" routerLink="/carrito">
-          <mat-icon class = "shopping-cart">shopping_cart</mat-icon>
+          <mat-icon class="shopping-cart">shopping_cart</mat-icon>
         </a>
         <span class="counter">{{ counter }}</span>
       </div>

@@ -14,6 +14,9 @@ import { ShopComponent } from './website/pages/shop/shop.component';
 import { LandingComponent } from './website/components/landing/landing.component';
 import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { ProductDetailComponent } from './website/pages/product-detail/product-detail.component';
+import { SwiperModule } from 'swiper/angular';
+import { NewCategoryComponent } from './website/pages/new-category/new-category.component';
+import { CategorycrudComponent } from './website/pages/categorycrud/categorycrud.component';
 
 const routes: Routes = [
   {
@@ -70,6 +73,11 @@ const routes: Routes = [
     ...canActivate(() => redirectUnauthorizedTo(['/login'])),
   },
   {
+    path: 'categoria',
+    component: CategorycrudComponent,
+    ...canActivate(() => redirectUnauthorizedTo(['/login'])),
+  },
+  {
     path: 'landingpage',
     component: LandingComponent,
   },
@@ -80,7 +88,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), SwiperModule],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
