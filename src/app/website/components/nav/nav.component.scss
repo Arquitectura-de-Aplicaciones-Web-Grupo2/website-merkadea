@@ -8,7 +8,7 @@
     width: 20px;
     height: 20px;
     line-height: 20px;
-    background: #acd9b2;
+    background: #5e9e2d;
     border-radius: 50%;
     display: block;
     color: white;
@@ -34,6 +34,7 @@
     #logoo {
       width: 3rem;
     }
+    
   }
   .side-menu {
     position: fixed;
@@ -41,7 +42,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background: white;
+    background:#fe8c00;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -50,7 +51,25 @@
     &.active {
       transform: translateX(0);
     }
+  
   }
+  a{ 
+    color:white;
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: 900;
+    text-align: center;
+  }
+  .close{
+    color: white;
+  }
+  li{
+    margin-bottom: 50%;
+  }
+  ul{
+    margin-bottom: 70%;
+  }
+
 }
 .hide-mobile {
   background: linear-gradient(90deg, #fe8c00 0%, #f83600 100%);
@@ -71,6 +90,7 @@
     ul {
       display: flex;
       list-style: none;
+      
       a {
         margin: 0 0.2em;
         color: inherit;
@@ -98,6 +118,7 @@
   .hide-mobile {
     display: block;
   }
+
 }
 
 /* Large and up */
@@ -108,4 +129,27 @@
   .hide-mobile {
     display: block;
   }
+}
+
+button{
+  color:white;
+  height: 70%;
+  font-size: 20px;
+  background-color: #FE8C00;
+}
+.mat-stroked-button{
+  border-color: white;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-radius: 5%;
+}
+
+.log-out{
+  float:right;
+}
+.shopping-cart{
+  color:black;
+}
+.shopping-cart2{
+  color: white;
 }

@@ -1,12 +1,8 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import {
-  Product,
-  CreateProductDTO,
-  UpdateProductDTO,
-} from '../../models/product.model';
-import { StoreService } from '../../services/store.service';
-import { ProductsService } from '../../services/products.service';
-
+import { Component, Input, Output, EventEmitter } from '@angular/core'; 
+import { StoreService } from 'src/app/services/store.service';
+import { ProductsService } from 'src/app/services/products.service';
+import { CreateProductDTO, UpdateProductDTO } from 'src/app/models/product.model';
+import { Product } from 'src/app/models/product.model';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -26,11 +22,12 @@ export class ProductsComponent {
     price: 0,
     stock: 0,
     active: true,
-    image: '',
+    image: 'https://www.globalizewine.com/wp-content/uploads/2018/08/jagermeister-700.jpg',
     category: {
       categoryId: '',
       name: '',
       description: '',
+     
     },
   };
   limit = 10;
@@ -76,7 +73,7 @@ export class ProductsComponent {
       stock: 15,
       active: true,
       image:
-        'https://ae01.alicdn.com/kf/S946a3c79cc9f4f1cbf929856e75747d0G/Cortadora-de-pelo-el-ctrica-USB-todo-en-uno-cortadora-de-pelo-recargable-con-cabeza-de.jpg_Q90.jpg_.webp',
+        'https://www.globalizewine.com/wp-content/uploads/2018/08/jagermeister-700.jpg',
     };
     this.productsService.create(product).subscribe((data) => {
       this.products.unshift(data);

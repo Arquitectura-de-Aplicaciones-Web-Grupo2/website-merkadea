@@ -14,14 +14,17 @@
     </div>
   </div>
   <div class="side-menu" [class.active]="activeMenu">
-    <button (click)="toggleMenu()">Close</button>
+    <button (click)="toggleMenu()" class = "close">
+      <mat-icon>close</mat-icon>
+    </button>
     <ul>
-      <li><a routerLink="/shop" href="">All</a></li>
-      <li><a routerLink="/home" href="">Home</a></li>
-      <li><a routerLink="/category/1" href="">Category 1</a></li>
+      <li><a routerLink="/shop" href=""><mat-icon>shopping_cart</mat-icon> Comprar </a></li>
+      <li><a routerLink="/home" href=""><mat-icon>home</mat-icon> Inicio </a></li>
+      <li><a routerLink="/login" href=""><mat-icon>exit_to_app</mat-icon> Cerrar Sesión </a></li>
     </ul>
   </div>
 </div>
+
 <div class="hide-mobile">
   <div>
     <nav>
@@ -29,26 +32,25 @@
         <img id="logoo" src="../../../assets/images/logo.png" alt="logo" />
       </a>
       <ul>
-        <button routerLink="/shop" type="button" class="btn btn-danger me-4">
-          Shop
+        <button mat-stroked-button routerLink="/shop" type="button">
+          <mat-icon class = "shopping-cart2">shopping_cart</mat-icon>
+          Comprar
         </button>
-        <button routerLink="/home" type="button" class="btn btn-danger me-4">
-          Home
+        <button mat-stroked-button routerLink="/home" type="button">
+          <mat-icon>home</mat-icon>
+          Inicio
         </button>
-        <button
-          routerLink="/category/1"
-          type="button"
-          class="btn btn-danger me-4"
-        >
-          Category
+        <button mat-stroked-button type="button"  (click)="onClick()" class = "log-out">
+          <mat-icon>exit_to_app</mat-icon>
+          Cerrar Sesión
         </button>
       </ul>
     </nav>
     <div class="info">
-      <div class="account">u201818218@upc.edu.pe</div>
+      
       <div class="cart">
-        <a href="">
-          <img src="./assets/svg/icon_shopping_cart.svg" alt="logo" />
+        <a href="" routerLink="/carrito">
+          <mat-icon class = "shopping-cart">shopping_cart</mat-icon>
         </a>
         <span class="counter">{{ counter }}</span>
       </div>

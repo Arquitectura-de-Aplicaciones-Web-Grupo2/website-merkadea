@@ -33,12 +33,5 @@ export class HomeComponent implements OnInit {
         this.offset += this.limit;
       });
   }
-  onClick() {
-    this.userService
-      .logout()
-      .then(() => {
-        this.router.navigate(['/login']);
-      })
-      .catch((error) => console.error());
-  }
+
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from 'src/app/services/products.service';
 import { Product } from 'src/app/models/product.model';
+import { category } from '../../../models/product.model';
 
 @Component({
   selector: 'app-category',
@@ -11,6 +12,7 @@ import { Product } from 'src/app/models/product.model';
 export class CategoryComponent implements OnInit {
   categoryId: string | null = null;
   products: Product[] = [];
+  categoryname : string | null = null;
 
   constructor(
     private route: ActivatedRoute,

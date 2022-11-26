@@ -11,7 +11,7 @@ import { RegisterComponent } from './website/pages/register/register.component';
 import { RecoveryComponent } from './website/pages/recovery/recovery.component';
 import { ProfileComponent } from './website/pages/profile/profile.component';
 import { ShopComponent } from './website/pages/shop/shop.component';
-import { LandingComponent } from './components/landing/landing.component';
+import { LandingComponent } from './website/components/landing/landing.component';
 import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { ProductDetailComponent } from './website/pages/product-detail/product-detail.component';
 
